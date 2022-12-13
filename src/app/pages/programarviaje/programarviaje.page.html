@@ -1,0 +1,28 @@
+<app-encabezado>
+</app-encabezado>
+
+  <ion-content class="ion-padding">
+    <ion-text color="tertiary" class="ion-text-center">
+      <H1>Programar viajes</H1>
+    </ion-text>
+    
+    <form #frmCrear="ngForm" (ngSubmit)="onSubmit()">
+      <ion-item>
+        <ion-label position="floating">Destino</ion-label>
+        <ion-input required type="text" name="destino" [(ngModel)]="viaje.destino" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Sugiere un precio</ion-label>
+        <ion-input required type="text" name="precio" [(ngModel)]="viaje.precio" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Cantidad asientos</ion-label>
+        <ion-input required type="text" name="tamano" [(ngModel)]="viaje.tamano" ></ion-input>
+      </ion-item>
+      <ion-button expand="full" class="ion-margin-top" color="primary" type="submit" [disabled]="frmCrear.invalid">
+        Añadir
+      </ion-button>
+    </form>
+  </ion-content>
+
+<app-footer></app-footer>

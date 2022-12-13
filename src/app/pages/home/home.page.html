@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-button (click)="abrirMenu()">
+        <ion-icon slot="start" name="menu"></ion-icon>
+
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      gDMSS
+    </ion-title>
+    <ion-text slot="end">
+      <p>{{nombre || 'Anónimo'}}</p>
+    </ion-text>
+    <ion-icon slot="end" name="person-circle-outline" class="ion-padding" size="large"></ion-icon>
+  
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-text color="medium" class="ion-text-center">
+    <h3>¡Bienvenido, <p>{{nombre}}!</p></h3>
+  </ion-text>
+<ion-card class="ion-text-center">
+  <h5>Si eres pasajero</h5>
+  <ion-button expand="full" color="medium" fill="outline" routerLink="/auto">Busca conductores <ion-icon slot="start" name="car"></ion-icon></ion-button>
+</ion-card>
+<ion-card class="ion-text-center">
+  <h5>Si eres conductor</h5>
+  <ion-button expand="full" name="star" color="success" routerLink="/programarviaje" >Programar viaje</ion-button>
+  </ion-card>
+  
+
+
+</ion-content>
+
+<ion-footer class="ion-text-center">
+  <ion-toolbar>
+    <ion-title>gDMSS</ion-title>
+  </ion-toolbar>
+<!--</ion-footer>-->

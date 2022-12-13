@@ -1,0 +1,29 @@
+<app-encabezado></app-encabezado>
+<ion-content class="ion-padding">
+
+  <ion-text color="medium">
+    <h3>{{texto}}</h3>
+    <p>Puedes elegir tus viajes semanales y consultar disponibilidad de conductores</p>
+  </ion-text>
+
+  <ion-button (click)="onClick()" expand="block" color="success">
+    Viajes de retorno
+  </ion-button>
+  
+  <ion-list>
+    <ion-item>
+      <ion-label>Cantidad:  {{contador}}</ion-label>
+    </ion-item>
+   
+  </ion-list>
+<ion-list>
+  <ion-item>
+    <ion-label>Tarifa: $</ion-label>
+  </ion-item>
+</ion-list>
+<ion-button class="btnpago" color="medium" >
+  PAGO
+</ion-button>
+
+</ion-content>
+<app-footer></app-footer>

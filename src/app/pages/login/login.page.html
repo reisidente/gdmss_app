@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-toolbar>
+      
+      <img class="logo" src="assets/img/logo.png" alt="">
+      <ion-title class="titulo">gDMSS </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <form #frm="ngForm" (ngSubmit)="onSubmit()" >
+      <ion-text color="primary" class="ion-text-capitalize ion-text-center">
+        <h1>Iniciar sesión</h1>
+      </ion-text>
+      <ion-item>
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-input type="text" name="usuario" [(ngModel)]="usuario.username" clearInput required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" required name="password" [(ngModel)]="usuario.password" ></ion-input>
+      </ion-item>
+      <ion-button type="submit" expand="block" class="ion-margin-top" color="medium" [disabled]="frm.invalid">
+        Login
+      </ion-button>
+      <ion-item>
+        <ion-label class="ion-text-center" onclick="" color="tertiary" routerLink="/recuperarpassword">Olvidé mi contraseña</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label class="ion-text-center" onclick="" color="tertiary" routerLink="/registro">Registrar usuario</ion-label>
+      </ion-item>
+    </form>
+  </ion-content>
+  
